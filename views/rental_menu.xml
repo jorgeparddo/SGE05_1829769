@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Menú raíz para Alquiler de Películas -->
+    <menuitem id="rental_menu_root" name="Alquiler de Películas" sequence="10"/>
+
+    <!-- Submenú para Películas -->
+    <menuitem id="rental_menu_peliculas" name="Películas" parent="rental_menu_root" sequence="1" action="action_pelicula_tree"/>
+    
+    <!-- Submenú para Categorías -->
+    <menuitem id="rental_menu_categorias" name="Categorías" parent="rental_menu_root" sequence="2" action="action_categoria_tree"/>
+    
+    <!-- Submenú para Actores -->
+    <menuitem id="rental_menu_actores" name="Actores" parent="rental_menu_root" sequence="3" action="action_actor_tree"/>
+</odoo>

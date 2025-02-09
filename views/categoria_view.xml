@@ -1,0 +1,40 @@
+<odoo>
+    <!-- Vista Tree para Categorías -->
+    <record id="view_categoria_tree" model="ir.ui.view">
+        <field name="name">rental.categoria.tree</field>
+        <field name="model">rental.categoria</field>
+        <field name="arch" type="xml">
+            <tree string="Categorías">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form para Categorías -->
+    <record id="view_categoria_form" model="ir.ui.view">
+        <field name="name">rental.categoria.form</field>
+        <field name="model">rental.categoria</field>
+        <field name="arch" type="xml">
+            <form string="Categoría">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Películas">
+                            <field name="pelicula_ids" mode="tree,form"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista Tree de Categorías -->
+    <record id="action_categoria_tree" model="ir.actions.act_window">
+        <field name="name">Categorías</field>
+        <field name="res_model">rental.categoria</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

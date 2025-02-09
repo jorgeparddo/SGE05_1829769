@@ -1,0 +1,37 @@
+<odoo noupdate="1">
+    <!-- Categorías -->
+    <record id="categoria_accion" model="rental.categoria">
+        <field name="name">Acción</field>
+        <field name="description">Películas de acción y aventura</field>
+    </record>
+    <record id="categoria_drama" model="rental.categoria">
+        <field name="name">Drama</field>
+        <field name="description">Películas dramáticas</field>
+    </record>
+
+    <!-- Actores -->
+    <record id="actor_1" model="rental.actor">
+        <field name="name">Actor Ejemplo 1</field>
+        <field name="biography">Breve biografía del actor 1.</field>
+    </record>
+    <record id="actor_2" model="rental.actor">
+        <field name="name">Actor Ejemplo 2</field>
+        <field name="biography">Breve biografía del actor 2.</field>
+    </record>
+
+    <!-- Películas -->
+    <record id="pelicula_1" model="rental.pelicula">
+        <field name="name">Película de Acción</field>
+        <field name="release_year">2020</field>
+        <field name="state">available</field>
+        <field name="category_id" ref="categoria_accion"/>
+        <field name="actor_ids" eval="[(6, 0, [ref('actor_1'), ref('actor_2')])]"/>
+    </record>
+    <record id="pelicula_2" model="rental.pelicula">
+        <field name="name">Película Dramática</field>
+        <field name="release_year">2018</field>
+        <field name="state">available</field>
+        <field name="category_id" ref="categoria_drama"/>
+        <field name="actor_ids" eval="[(6, 0, [ref('actor_2')])]"/>
+    </record>
+</odoo>

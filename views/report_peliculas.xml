@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Plantilla QWeb para el informe de películas -->
+    <template id="report_peliculas_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="pelicula">
+                <div style="page-break-after: always; margin-bottom: 20px;">
+                    <h2><t t-esc="pelicula.name"/></h2>
+                    <p><strong>Año de Lanzamiento:</strong> <t t-esc="pelicula.release_year"/></p>
+                    <p><strong>Categoría:</strong> <t t-esc="pelicula.category_id.name"/></p>
+                    <p><strong>Estado:</strong> <t t-esc="pelicula.state"/></p>
+                    <p><strong>Descripción:</strong> <t t-esc="pelicula.description"/></p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

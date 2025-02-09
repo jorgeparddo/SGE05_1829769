@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rental_pelicula_user,rental.pelicula user,model_rental_pelicula,base.group_user,1,0,0,0
+access_rental_categoria_user,rental.categoria user,model_rental_categoria,base.group_user,1,0,0,0
+access_rental_actor_user,rental.actor user,model_rental_actor,base.group_user,1,0,0,0
+
+access_rental_pelicula_manager,rental.pelicula manager,model_rental_pelicula,base.group_system,1,1,1,1
+access_rental_categoria_manager,rental.categoria manager,model_rental_categoria,base.group_system,1,1,1,1
+access_rental_actor_manager,rental.actor manager,model_rental_actor,base.group_system,1,1,1,1
